@@ -1,0 +1,8 @@
+#pragma once
+
+/* Fortran dverk signature (gfortran) */
+typedef void (*fcn_ptr)(int *, double *, double *, double *);
+extern void dverk_(int *n, fcn_ptr fcn,
+                   double *x, double *y, double *xend, double *tol,
+                   int *ind, double *c, int *nw, double *w);
+#define dverk dverk_
